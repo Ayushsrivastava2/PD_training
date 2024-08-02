@@ -14,6 +14,14 @@ ASIC design flow
 6. Routing
 7. Signoff: physical verification - DRC,LVS. timing verification - STA, CDC.
 
+### Day1-Lab
+Using picrv32a design for synthesis
+Task: To find FF ratio in design-> FF ratio: 1613/14876=0.1084  (10.8%)
+1. checking config.tcl in design/picrv32a/src dir.<br>![image](https://github.com/user-attachments/assets/81a43eda-af6f-4758-a49b-9cbbe9d7a57a)
 
+3. preparing design in openlane
+4. running synthesis (command: run_synthesis)
+5. verilog vs gate level netlist
+6. synthesis report
 
   
