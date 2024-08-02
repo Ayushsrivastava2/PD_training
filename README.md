@@ -2,7 +2,7 @@
 Physical design training from VLSI System Design
 
 ## Day1
-## Theory
+### Theory
 ASIC design flow
 1. Synthesis: 
   mapping of lib std cells to RTL code, tool - yosys
