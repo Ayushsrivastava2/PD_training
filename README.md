@@ -14,6 +14,7 @@ ASIC design flow
 
 ### Lab
 Using picrv32a design for synthesis
+
 Task: To find FF ratio in design-> FF ratio: 1613/14876=0.1084  (10.8%)
 1. checking config.tcl in design/picrv32a/src dir.<br>![image](https://github.com/user-attachments/assets/81a43eda-af6f-4758-a49b-9cbbe9d7a57a)
 
