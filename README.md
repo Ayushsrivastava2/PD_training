@@ -4,15 +4,13 @@ Physical design training from VLSI System Design
 ## Day1
 ### Theory
 ASIC design flow
-1. Synthesis: 
-  mapping of lib std cells to RTL code, tool - yosys
-3. Floorplanning: 
-  Planning die area of IC based on gate level netlist cells and core utilization %. Pin locations and macro locations (pre-placed cells) on die.
-4. Powerplanning: 
-  Define pg grid structure. Global placement->optimal placement of instnces according to timing constraint, can be invalid placement. Detailed placement-> legalizing global placement.
-5. CTS (clock tree synthesis)
-6. Routing
-7. Signoff: physical verification - DRC,LVS. timing verification - STA, CDC.
+1. Synthesis<br>mapping of lib std cells to RTL code, tool - yosys
+2. Floorplanning<br>Planning die area of IC based on gate level netlist cells and core utilization %. Pin locations and macro locations (pre-placed cells) on die.
+3. Powerplanning<br>Define pg grid structure. Global placement->optimal placement of instnces according to timing constraint, can be invalid placement. Detailed placement-> legalizing global placement.
+4. CTS (clock tree synthesis)<br>placing clock network conneting sequential cells and clock instnces.
+5. Routing<br>Signal routing between input and output data pins of instances.
+6. Signoff<br>physical verification - DRC,LVS. timing verification - STA, CDC. fault check - DFT.
+
 
 ### Day1-Lab
 Using picrv32a design for synthesis
