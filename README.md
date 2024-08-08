@@ -28,33 +28,21 @@ Task: To find FF ratio in design-> FF ratio: 1613/14876=0.1084  (10.8%)
 
 ## Day2
 ### Theory
-FloorPlanning
+FloorPlanning<br>
+Area estimation of die = sum of instances size in gate netlist / core area utilization<br>
+core area utilization ideally should be around 50-60% to give extra space for buffers and other instances that will get added downstream.<br>
+Preplaced cell = hard IPs/macros etc. that are placed in floorplan stage itself before any other instance. Location of pre-placed cells are set by users. Preplaced cells like memory macros are surrounded by decqp cells.<br>
+Decap cells = cap instances whcih provide charger to switching instances and their reduces IR drop. Ensures ideal voltage reaches switching instanes so that logic 0 or 1 doesn't go to unstable state.<br>
+Tap cells = avoid latchup condition occur in CMOS devices. Connect newll to VDD and substrate.<br>
 
-Area estimation of die = sum of instances size in gate netlist / core area utilization
+Powerplanning<br>
+Define PDN of IC. handshake between frontend and backend team is required. frontend team define pin and backend team define location of pins.<br>
 
-core area utilization ideally should be around 50-60% to give extra space for buffers and other instances that will get added downstream.
-
-Preplaced cell = hard IPs/macros etc. that are placed in floorplan stage itself before any other instance. Location of pre-placed cells are set by users. Preplaced cells like memory macros are surrounded by decqp cells.
-
-Decap cells = cap instances whcih provide charger to switching instances and their reduces IR drop. Ensures ideal voltage reaches switching instanes so that logic 0 or 1 doesn't go to unstable state.
-
-Tap cells = avoid latchup condition occur in CMOS devices. Connect newll to VDD and substrate.
-
-
-Powerplanning
-
-Define PDN of IC. handshake between frontend and backend team is required. frontend team define pin and backend team define location of pins.
-
-
-Placement
-
-gloabl placement - placement of instances with no legalization
-
-detailed placement - placement with no overlaps of instances. all instances in cell rows.
-
-placeing buffers in placement: estimate cap between instnces based on distance. place buffer in path of instance with long distance. 
-
-how to check placement is correct or not?  - ideal clock network is assumed (clk skew = 0), setup check is done on placed instances.
+Placement<br>
+gloabl placement - placement of instances with no legalization<br>
+detailed placement - placement with no overlaps of instances. all instances in cell rows.<br>
+placeing buffers in placement: estimate cap between instnces based on distance. place buffer in path of instance with long distance. <br>
+how to check placement is correct or not?  - ideal clock network is assumed (clk skew = 0), setup check is done on placed instances.<br>
 
 ### Lab
 1. checking variables for floorplanning in openlane in README.md in configurations
