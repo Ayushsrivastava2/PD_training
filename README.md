@@ -58,4 +58,10 @@ how to check placement is correct or not?  - ideal clock network is assumed (clk
     - nets: 14978
 7. viewing design using magic<br>![image](https://github.com/user-attachments/assets/f6cbb7a3-de90-4e94-92ed-f248ec66904e)
 
-  
+## Day3
+### Theory
+
+### Lab
+1. SPICE ckt of CMOS inverter<br>![image](https://github.com/user-attachments/assets/6c6fba13-ce3f-4dce-9e28-e0923d31770c)
+2. Spice decxk of CMOS inverter with VTC plot<br>![image](https://github.com/user-attachments/assets/27ae2af9-8263-4beb-8e2f-29e3e2882e8c)
+
