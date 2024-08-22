@@ -79,14 +79,14 @@ how to check placement is correct or not?  - ideal clock network is assumed (clk
    3.3 spice deck for dynamic analysis<br>![image](https://github.com/user-attachments/assets/15cbb6c3-93ec-448a-852d-c9a31d295d4f)
    3.4 transient output voltage waveform<br>![image](https://github.com/user-attachments/assets/0fa6a03e-ce5f-4160-a9f9-4248b41a8762)
    3.5 static summary:<br>
-+-----+------+------+------+-------------+------------+
+
 |  wp |  vm  | vil  | vih  |     vol     |    voh     |
-+-----+------+------+------+-------------+------------+
+|-----|------|------|------|-------------|------------|
 |  37 | 1.33 | 0.96 | 1.48 | 0.243430731 | 3.13616532 |
 | 117 | 1.6  | 1.35 | 1.81 | 0.239540941 | 3.02077689 |
 | 197 | 1.73 | 1.52 | 1.97 | 0.197538491 | 3.02188905 |
 | 277 | 1.8  | 1.62 | 2.06 | 0.171349188 | 3.03557396 |
-+-----+------+------+------+-------------+------------+
+
    3.6 dynamic summary: 
 
 
