@@ -74,6 +74,7 @@ how to check placement is correct or not?  - ideal clock network is assumed (clk
 1. SPICE ckt of CMOS inverter<br>![image](https://github.com/user-attachments/assets/6c6fba13-ce3f-4dce-9e28-e0923d31770c)
 2. Spice decxk of CMOS inverter with VTC plot<br>![image](https://github.com/user-attachments/assets/27ae2af9-8263-4beb-8e2f-29e3e2882e8c)
 3. Impact of varying Wp on CMOS inverter study
+
    3.1 spice deck for static analysis<br>![image](https://github.com/user-attachments/assets/707b563f-c777-4fe8-8cc5-f27d4852eb0a)
    3.2 VTC of cmos inverter (VTC on left, derivative of plot on right)<br>![image](https://github.com/user-attachments/assets/ca8bad83-1d9c-4b41-ad8e-c1dd972af552)
    3.3 spice deck for dynamic analysis<br>![image](https://github.com/user-attachments/assets/15cbb6c3-93ec-448a-852d-c9a31d295d4f)
