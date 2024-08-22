@@ -57,6 +57,15 @@ how to check placement is correct or not?  - ideal clock network is assumed (clk
     - components: 21230
     - nets: 14978
 7. viewing design using magic<br>![image](https://github.com/user-attachments/assets/f6cbb7a3-de90-4e94-92ed-f248ec66904e)
+8. running floorplan with different variables
+   1.1 first set of variables<br>![image](https://github.com/user-attachments/assets/7d224b5f-fab2-40fd-a35c-a4ff77dd83ab)
+   1.2 floorplan:<br>![image](https://github.com/user-attachments/assets/de8be58d-9b00-4408-a98a-b9b93be36326)
+   1.3 pins after floorplan<br>![image](https://github.com/user-attachments/assets/d82f9068-dc5a-43bd-a6e2-60796899fcc0)
+   2.1 second set of variables<br>![image](https://github.com/user-attachments/assets/5c1e9719-8816-4759-bba2-ebcd968bfaa8)
+   2.2 new floorplan:<br>![image](https://github.com/user-attachments/assets/0acda414-eee3-43bd-8d4f-75e36aba59ed)
+9. All instnces are places at left bottom corner<br>![image](https://github.com/user-attachments/assets/18fc82d6-580e-4c8d-8c1b-0b6563c8344f)
+10. Design after placement<br>![image](https://github.com/user-attachments/assets/c94f091d-6cb3-40e2-a921-35ee62ff70a2)
+11. Checking instance<br>![image](https://github.com/user-attachments/assets/53a5ea39-ca8f-42ab-9916-6ce686ff6469)
 
 ## Day3
 ### Theory
