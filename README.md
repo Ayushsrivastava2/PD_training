@@ -78,7 +78,7 @@ how to check placement is correct or not?  - ideal clock network is assumed (clk
    3.2 VTC of cmos inverter (VTC on left, derivative of plot on right)<br>![image](https://github.com/user-attachments/assets/ca8bad83-1d9c-4b41-ad8e-c1dd972af552)
    3.3 spice deck for dynamic analysis<br>![image](https://github.com/user-attachments/assets/15cbb6c3-93ec-448a-852d-c9a31d295d4f)
    3.4 transient output voltage waveform<br>![image](https://github.com/user-attachments/assets/0fa6a03e-ce5f-4160-a9f9-4248b41a8762)
-   3.5 static summary:
+   3.5 static summary:<br>
 +-----+------+------+------+-------------+------------+
 |  wp |  vm  | vil  | vih  |     vol     |    voh     |
 +-----+------+------+------+-------------+------------+
