@@ -69,6 +69,11 @@ how to check placement is correct or not?  - ideal clock network is assumed (clk
 
 ## Day3
 ### Theory
+#### CMOS inverter characteristics
+![image](https://github.com/user-attachments/assets/f944e620-1108-4be8-a627-2d50641705d6)
+![image](https://github.com/user-attachments/assets/580731ed-561a-47ba-90c2-16e918dc6335)
+![image](https://github.com/user-attachments/assets/76c171a3-11f8-4fe7-99a8-9d4a7163e498)
+![image](https://github.com/user-attachments/assets/3df7e100-2b44-4738-8630-cef46ced26e9)
 
 ### Lab
 #### Generating CMOS spice deck
