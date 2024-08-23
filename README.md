@@ -5,10 +5,15 @@ Physical design training from VLSI System Design
     - [Asic design flow](#Introduction-to-ASIC-deign-flow)
     - [Synthesis of picv32a design](#Synthesis-of-picv32a-design)
 - [Day2](#Day2)
-    - [Floorplanning, powerplanning and placement theory](#Floorplanning,-powerplanning-and-placement-theory)
+    - [Floorplanning, powerplanning and placement theory](#Floorplanning-powerplanning-and-placement-theory)
     - [Running floorplan on picv32a](#Running-floorplan-on-picv32a)
     - [Running placement on picv32a](#Running-placement-on-picv32a)
 - [Day3](#Day3)
+    - [CMOS inverter characteristics](#CMOS-inverter-characteristics)
+    - [Generating CMOS spice deck](#Generating-CMOS-spice-deck)
+    - [Running spice deck file using ngspice](#Running-spice-deck-file-using-ngspice)
+    - [Impact of varying PMOS width on CMOS inverter study](#Impact-of-varying-PMOS-width-on-CMOS-inverter-study)
+    - [DRC checks](#DRC-checks)
 
 ## Day1
 ### Introduction to ASIC deign flow
@@ -36,7 +41,7 @@ Task: To find FF ratio in design-> FF ratio: 1613/14876=0.1084  (10.8%)
 5. synthesis report<br>![image](https://github.com/user-attachments/assets/560886c5-0b92-469c-800e-516a98c0a34e)
 
 ## Day2
-### Floorplanning, powerplanning and placement theory
+### Floorplanning powerplanning and placement theory
 FloorPlanning<br>
 Area estimation of die = sum of instances size in gate netlist / core area utilization<br>
 core area utilization ideally should be around 50-60% to give extra space for buffers and other instances that will get added downstream.<br>
@@ -79,15 +84,13 @@ how to check placement is correct or not?  - ideal clock network is assumed (clk
 1. Checking instance<br>![image](https://github.com/user-attachments/assets/53a5ea39-ca8f-42ab-9916-6ce686ff6469)
 
 ## Day3
-### Theory
-#### CMOS inverter characteristics
+### CMOS inverter characteristics
 ![image](https://github.com/user-attachments/assets/f944e620-1108-4be8-a627-2d50641705d6)
 ![image](https://github.com/user-attachments/assets/580731ed-561a-47ba-90c2-16e918dc6335)
 ![image](https://github.com/user-attachments/assets/76c171a3-11f8-4fe7-99a8-9d4a7163e498)
 ![image](https://github.com/user-attachments/assets/3df7e100-2b44-4738-8630-cef46ced26e9)
 
-### Lab
-#### Generating CMOS spice deck
+### Generating CMOS spice deck
 1. clone source files from vsdcelldesign.git<br>![image](https://github.com/user-attachments/assets/097bede9-0260-44b4-af69-25a8c0930975)
 2. copy tech file to local repo<br>![image](https://github.com/user-attachments/assets/ef36dd73-4a9c-491e-bb31-5fc1f42f8a6d)
 3. open inverter layout mag file with magic<br>![image](https://github.com/user-attachments/assets/a337ae19-15ee-4156-93c3-c2b6211b54a3)
@@ -99,9 +102,11 @@ how to check placement is correct or not?  - ideal clock network is assumed (clk
 9. spice deck file after including nmos/pmos model from lib<br>![image](https://github.com/user-attachments/assets/b0de125a-6531-4c77-8605-1d491ee2cf4c)
 
 
-#### Running spice deck file using ngspice
+### Running spice deck file using ngspice
 1. SPICE ckt of CMOS inverter<br>![image](https://github.com/user-attachments/assets/6c6fba13-ce3f-4dce-9e28-e0923d31770c)
 2. Spice deck of CMOS inverter with VTC plot<br>![image](https://github.com/user-attachments/assets/27ae2af9-8263-4beb-8e2f-29e3e2882e8c)
+
+### Impact of varying PMOS width on CMOS inverter study
 3. Impact of varying Wp on CMOS inverter study
 
    3.1 spice deck for static analysis<br>![image](https://github.com/user-attachments/assets/707b563f-c777-4fe8-8cc5-f27d4852eb0a)
@@ -135,7 +140,7 @@ how to check placement is correct or not?  - ideal clock network is assumed (clk
    - Vm of inverter shift toward high voltage on increasing strangh of pmos inverter, same goes for VIL, VIH
    - on increasing driving strangth of pmos on inverter, rise delay and slew decreases -> pmos charges cload -> expected result; fall slew decreases but fall delay increases -> why? on increasing wp of pmos, cpa of pos also increased, now nmos have to dischareg more cap -> resulting in more delay
 
-#### DRC checks
+### DRC checks
 1. Important links:
     - MAagic DRC doc: http://opencircuitdesign.com/magic/
     - skywater DRC doc: https://skywater-pdk.readthedocs.io/en/main/
