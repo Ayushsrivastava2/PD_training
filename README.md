@@ -16,6 +16,11 @@ Physical design training from VLSI System Design
     - [DRC checks](#DRC-checks)
 - [Day4](#Day4)
     - [Generating LEF file from mag file](#Generating-LEF-file-from-mag-file)
+    - [Adding custom inv to picv32a](#Adding-custom-inv-to-picv32a)
+    - [STA theory]
+    - [Pre-layout timing analysis on picv32a]
+    - [CTS on picv32a]
+    - [Post-layout timing analysis on picv32a]
 
 ## Day1
 ### Introduction to ASIC deign flow
@@ -188,6 +193,25 @@ A LEF file is created for std cell containg all basic geom info of cell that is 
 3. setting port class and port usage<br>![image](https://github.com/user-attachments/assets/a7a450d7-2920-46c3-bae9-6436c8987a59)
 4. saving mag file with new name - sky130_myinv.mag<br>![image](https://github.com/user-attachments/assets/d827f097-c317-44f0-bd79-78326864ada4)
 5. loading new mag file and dumping LEF file<br>![image](https://github.com/user-attachments/assets/52a3796a-3fc0-4582-91b2-e9ae9989de43)
+
+### Adding custom inv to picv32a
+1. inverter definition present in lib file<br>![image](https://github.com/user-attachments/assets/09beb37a-dbde-4328-a5f9-5cd8481ed48b)
+2. copy lef file and lib file to src folder of picv32a<br>![image](https://github.com/user-attachments/assets/db3c2d09-8b88-479e-a4ca-277de2adb1ed)
+3. commands to add in config.tcl to include custom inverter
+    - set ::env(LIB_SYNTH) "$::env(OPENLANE_ROOT)/designs/picorv32a/src/sky130_fd_sc_hd__typical.lib"
+    - set ::env(LIB_FASTEST) "$::env(OPENLANE_ROOT)/designs/picorv32a/src/sky130_fd_sc_hd__fastest.lib"
+    - set ::env(LIB_SLOWEST) "$::env(OPENLANE_ROOT)/designs/picorv32a/src/sky130_fd_sc_hd__slow.lib"
+    - set ::env(LIB_TYPICAL) "$::env(OPENLANE_ROOT)/designs/picorv32a/src/sky130_fd_sc_hd__typical.lib"
+    - set ::env(EXTRA_LEFS) \[glob ::env(OPENLANE_ROOT)/design/picov32a/src/*.lef\]
+4. config.tcl file<br>![image](https://github.com/user-attachments/assets/74bf1bb9-1d8f-4a7c-80f4-48cdeb48e4b2)
+5. prepare picorv32a design with custom inv added<br>![image](https://github.com/user-attachments/assets/2aa2f0dd-6180-4357-91ab-da827a8f29b3)
+6. run synthesis and check instance count of customer inverter(command to run synthesis: '''run_synthesis''')<br>![image](https://github.com/user-attachments/assets/775a42e4-9dd1-4148-b36b-d6a2918846c1)
+   <br>synthesis done - 1554 instances of sky130_myinv used
+7. running floorplan and placement to see sky130_myinv in design<br>![image](https://github.com/user-attachments/assets/a648c138-dcdf-4953-ab3e-b9bb0919c4e2)
+   <br>command to run floorplan: '''run_floorplan''', command to run placement: '''run_placemnt'''
+
+
+
 
 
 
