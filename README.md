@@ -2,7 +2,7 @@
 Physical design training from VLSI System Design
 ## Table of content
 - [Day1](#Day1)
-    - [Asic design flow](#Introduction-to-ASIC-desin-flow)
+    - [Asic design flow](#Introduction-to-ASIC-deign-flow)
 - [Day2](#Day2)
 - [Day3](#Day3)
 
