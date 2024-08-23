@@ -127,7 +127,8 @@ how to check placement is correct or not?  - ideal clock network is assumed (clk
 2. download and untar drc test examples<br>![image](https://github.com/user-attachments/assets/95433225-8963-4d8c-a892-c90aae96ab33)
 3. load one of example mag file (met1.mag file)<br>![image](https://github.com/user-attachments/assets/4fb56394-4cc2-4cd7-942c-0e8d7203ef91)
 4. loading techfile and checking drc on example<br>![image](https://github.com/user-attachments/assets/59c9e3cf-fd2e-4f73-bad8-bb64f153ae8c)
-
+5. checking DRC rule from sky130A google website ([link](https://skywater-pdk.readthedocs.io/en/main/rules/periphery.html#m3))<br>![image](https://github.com/user-attachments/assets/ceb62ec2-153f-4e2c-8233-db795a454652)
+6. 
 
 
 
