@@ -128,7 +128,22 @@ how to check placement is correct or not?  - ideal clock network is assumed (clk
 3. load one of example mag file (met1.mag file)<br>![image](https://github.com/user-attachments/assets/4fb56394-4cc2-4cd7-942c-0e8d7203ef91)
 4. loading techfile and checking drc on example<br>![image](https://github.com/user-attachments/assets/59c9e3cf-fd2e-4f73-bad8-bb64f153ae8c)
 5. checking DRC rule from sky130A google website ([link](https://skywater-pdk.readthedocs.io/en/main/rules/periphery.html#m3))<br>![image](https://github.com/user-attachments/assets/ceb62ec2-153f-4e2c-8233-db795a454652)
-6. 
+6. load poly.mag and checking poly.9 example<br>![image](https://github.com/user-attachments/assets/781ed425-9329-40e3-856a-63b170a458f5)
+7. checking poly.9 in website<br>![image](https://github.com/user-attachments/assets/7be26913-da40-4e73-bcf7-f0e93a32ca18)
+8. checked distance between poly and ppolyres in poly.9, distance is 0.25um (approx), DRC voilation not flagged<br>![image](https://github.com/user-attachments/assets/45e1a543-776e-4ab4-afed-a359e72d74fd)
+9. checking tech file for poly and ppolyres distance rule -> not found in tech file<br>
+![image](https://github.com/user-attachments/assets/827f0b2e-a1fe-49ac-8f05-7ab68948931b)<br>
+![image](https://github.com/user-attachments/assets/c724e3c9-4451-4adf-892c-cb09b421725a)
+10. new rule added to ppolyres<br>![image](https://github.com/user-attachments/assets/963ff612-8f9e-42db-92c5-e62ec0b85cd1)
+11. rerun case with new tech file, DRC voilated for poly and ppolyres distance<br>![image](https://github.com/user-attachments/assets/344c3b04-b16a-48fc-848f-cd176ad639ce)
+
+
+
+
+
+ 
+
+
 
 
 
