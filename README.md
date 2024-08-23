@@ -2,11 +2,12 @@
 Physical design training from VLSI System Design
 ## Table of content
 - [Day1](#Day1)
+    - [Asic design flow](#Introduction-to-ASIC-desin-flow)
 - [Day2](#Day2)
 - [Day3](#Day3)
 
 ## Day1
-### Theory
+### Introduction to ASIC deign flow
 ASIC design flow
 1. Synthesis<br>mapping of lib std cells to RTL code, tool - yosys
 2. Floorplanning<br>Planning die area of IC based on gate level netlist cells and core utilization %. Pin locations and macro locations (pre-placed cells) on die.
