@@ -15,6 +15,7 @@ Physical design training from VLSI System Design
     - [Impact of varying PMOS width on CMOS inverter study](#Impact-of-varying-PMOS-width-on-CMOS-inverter-study)
     - [DRC checks](#DRC-checks)
 - [Day4](#Day4)
+    - [Generating LEF file from mag file](#Generating-LEF-file-from-mag-file)
 
 ## Day1
 ### Introduction to ASIC deign flow
@@ -168,9 +169,32 @@ how to check placement is correct or not?  - ideal clock network is assumed (clk
 
 ## Day4
 ### Generating LEF file from mag file
-Why LEF file needs to be dumped? why can't directly use layout file or gds file of cell?
-While doing placement of cell, information required for the cells are - bbox, pg pins/signal pins geoms. Details at transistor level - poly layer, diffusion layer, transistor loction is not needed. 
+Why LEF file needs to be dumped? why can't directly use layout file or gds file of cell?<br>
+While doing placement of cell, information required for the cells are - bbox, pg pins/signal pins geoms. Details at transistor level - poly layer, diffusion layer, transistor loction is not needed. <br>
 A LEF file is created for std cell containg all basic geom info of cell that is requied during placement of cell in PnR tool.
+
+#### Changing grid size of layout
+1. loading sky130_inv.mag file and check default grid<br>![image](https://github.com/user-attachments/assets/39054ed3-6c6f-437d-b265-56441d2677a8)
+2. check tract.info for track pitch size and change grid size in magic according to this pitch<br>![image](https://github.com/user-attachments/assets/315f1b29-aed7-4ce1-b3e3-7df12852597d)
+3. what values stored in track.info file? pitch info for each metal layers. Height of standard cells are measured are measured in terms of trach pitch.
+4. layout with new grid<br>![image](https://github.com/user-attachments/assets/e03542d9-9bb2-46a1-b14c-8d5119b55bb5)
+5. some layout checks
+    - ports should be at intersection of grids
+    - width of standard cell must be odd multiple of x pitch
+
+#### Labeling ports in layout
+1. adding port label to pin A<br>![image](https://github.com/user-attachments/assets/2b762ea9-92bb-48a9-88e8-5492054f2b13)
+2. port number? port number decides order in which LEF is written for port
+3. setting port class and port usage<br>![image](https://github.com/user-attachments/assets/a7a450d7-2920-46c3-bae9-6436c8987a59)
+4. saving mag file with new name - sky130_myinv.mag<br>![image](https://github.com/user-attachments/assets/d827f097-c317-44f0-bd79-78326864ada4)
+5. loading new mag file and dumping LEF file<br>![image](https://github.com/user-attachments/assets/52a3796a-3fc0-4582-91b2-e9ae9989de43)
+
+
+
+
+
+
+
 
 
 
