@@ -71,8 +71,21 @@ how to check placement is correct or not?  - ideal clock network is assumed (clk
 ### Theory
 
 ### Lab
+#### Generating CMOS spice deck
+1. clone source files from vsdcelldesign.git<br>![image](https://github.com/user-attachments/assets/097bede9-0260-44b4-af69-25a8c0930975)
+2. copy tech file to local repo<br>![image](https://github.com/user-attachments/assets/ef36dd73-4a9c-491e-bb31-5fc1f42f8a6d)
+3. open inverter layout mag file with magic<br>![image](https://github.com/user-attachments/assets/a337ae19-15ee-4156-93c3-c2b6211b54a3)
+4. checking different components of cmos from layout in magic<br>![image](https://github.com/user-attachments/assets/28341162-3a2c-46bd-be87-2f8bb4e81bb6)
+5. creating extract file from layout<br>![image](https://github.com/user-attachments/assets/8455a456-100b-4e97-959a-3dfdbb23afb6)
+6. checking extracted file from magic<br>![image](https://github.com/user-attachments/assets/2a0b5a57-fb9d-4a09-a342-3a832f10b597)
+7. extracting spice deck form magic<br>![image](https://github.com/user-attachments/assets/880b9fe7-75fa-4e3f-868c-d507793afdbb)
+8. including lib file models in spice deck file<br>![image](https://github.com/user-attachments/assets/8accddcb-672b-42d2-9e6c-6b88d1abff89)
+9. spice deck file after including nmos/pmos model from lib<br>![image](https://github.com/user-attachments/assets/b0de125a-6531-4c77-8605-1d491ee2cf4c)
+
+
+#### Running spice deck file using ngspice
 1. SPICE ckt of CMOS inverter<br>![image](https://github.com/user-attachments/assets/6c6fba13-ce3f-4dce-9e28-e0923d31770c)
-2. Spice decxk of CMOS inverter with VTC plot<br>![image](https://github.com/user-attachments/assets/27ae2af9-8263-4beb-8e2f-29e3e2882e8c)
+2. Spice deck of CMOS inverter with VTC plot<br>![image](https://github.com/user-attachments/assets/27ae2af9-8263-4beb-8e2f-29e3e2882e8c)
 3. Impact of varying Wp on CMOS inverter study
 
    3.1 spice deck for static analysis<br>![image](https://github.com/user-attachments/assets/707b563f-c777-4fe8-8cc5-f27d4852eb0a)
