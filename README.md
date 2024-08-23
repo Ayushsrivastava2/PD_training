@@ -198,17 +198,17 @@ A LEF file is created for std cell containg all basic geom info of cell that is 
 1. inverter definition present in lib file<br>![image](https://github.com/user-attachments/assets/09beb37a-dbde-4328-a5f9-5cd8481ed48b)
 2. copy lef file and lib file to src folder of picv32a<br>![image](https://github.com/user-attachments/assets/db3c2d09-8b88-479e-a4ca-277de2adb1ed)
 3. commands to add in config.tcl to include custom inverter
-    - set ::env(LIB_SYNTH) "$::env(OPENLANE_ROOT)/designs/picorv32a/src/sky130_fd_sc_hd__typical.lib"
-    - set ::env(LIB_FASTEST) "$::env(OPENLANE_ROOT)/designs/picorv32a/src/sky130_fd_sc_hd__fastest.lib"
-    - set ::env(LIB_SLOWEST) "$::env(OPENLANE_ROOT)/designs/picorv32a/src/sky130_fd_sc_hd__slow.lib"
-    - set ::env(LIB_TYPICAL) "$::env(OPENLANE_ROOT)/designs/picorv32a/src/sky130_fd_sc_hd__typical.lib"
-    - set ::env(EXTRA_LEFS) \[glob ::env(OPENLANE_ROOT)/design/picov32a/src/*.lef\]
+    - `set ::env(LIB_SYNTH) "$::env(OPENLANE_ROOT)/designs/picorv32a/src/sky130_fd_sc_hd__typical.lib"`
+    - `set ::env(LIB_FASTEST) "$::env(OPENLANE_ROOT)/designs/picorv32a/src/sky130_fd_sc_hd__fastest.lib"`
+    - `set ::env(LIB_SLOWEST) "$::env(OPENLANE_ROOT)/designs/picorv32a/src/sky130_fd_sc_hd__slow.lib"`
+    - `set ::env(LIB_TYPICAL) "$::env(OPENLANE_ROOT)/designs/picorv32a/src/sky130_fd_sc_hd__typical.lib"`
+    - `set ::env(EXTRA_LEFS) \[glob ::env(OPENLANE_ROOT)/design/picov32a/src/*.lef\]`
 4. config.tcl file<br>![image](https://github.com/user-attachments/assets/74bf1bb9-1d8f-4a7c-80f4-48cdeb48e4b2)
 5. prepare picorv32a design with custom inv added<br>![image](https://github.com/user-attachments/assets/2aa2f0dd-6180-4357-91ab-da827a8f29b3)
-6. run synthesis and check instance count of customer inverter(command to run synthesis: '''run_synthesis''')<br>![image](https://github.com/user-attachments/assets/775a42e4-9dd1-4148-b36b-d6a2918846c1)
+6. run synthesis and check instance count of customer inverter(command to run synthesis: `run_synthesis`)<br>![image](https://github.com/user-attachments/assets/775a42e4-9dd1-4148-b36b-d6a2918846c1)
    <br>synthesis done - 1554 instances of sky130_myinv used
 7. running floorplan and placement to see sky130_myinv in design<br>![image](https://github.com/user-attachments/assets/a648c138-dcdf-4953-ab3e-b9bb0919c4e2)
-   <br>command to run floorplan: '''run_floorplan''', command to run placement: '''run_placemnt'''
+   <br>command to run floorplan: `run_floorplan`, command to run placement: `run_placemnt`
 
 
 
