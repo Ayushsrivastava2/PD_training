@@ -110,12 +110,19 @@ how to check placement is correct or not?  - ideal clock network is assumed (clk
 3. Impact of varying Wp on CMOS inverter study
 
    3.1 spice deck for static analysis<br>![image](https://github.com/user-attachments/assets/707b563f-c777-4fe8-8cc5-f27d4852eb0a)
+   
    3.2 VTC of cmos inverter (VTC on left, derivative of plot on right)<br>![image](https://github.com/user-attachments/assets/ca8bad83-1d9c-4b41-ad8e-c1dd972af552)
+   
    3.3 spice deck for dynamic analysis<br>![image](https://github.com/user-attachments/assets/15cbb6c3-93ec-448a-852d-c9a31d295d4f)
+   
    3.4 transient output voltage waveform<br>![image](https://github.com/user-attachments/assets/90bfd97a-b6e3-4d27-9556-d3ef6b7a5d03)
+   
    3.6 output files dumped after running spice files<br>![image](https://github.com/user-attachments/assets/7086b28f-3f7d-4552-95bb-fe742ea1298f)
+   
    3.7 script to get static characteristics of cmos inverter from output files<br>![image](https://github.com/user-attachments/assets/12115580-719b-4ae1-beb7-bcdd68f10bcc)
+   
    3.8 script to get dynamic characteristics of cmos inverter from output files<br>![image](https://github.com/user-attachments/assets/5e3ae4b7-97f8-4296-94b5-0dbe7f5521dc)
+   
    3.9 static summary:<br>
 
     |  wp |  vm  | vil  | vih  |     vol     |    voh     |
