@@ -14,6 +14,7 @@ Physical design training from VLSI System Design
     - [Running spice deck file using ngspice](#Running-spice-deck-file-using-ngspice)
     - [Impact of varying PMOS width on CMOS inverter study](#Impact-of-varying-PMOS-width-on-CMOS-inverter-study)
     - [DRC checks](#DRC-checks)
+- [Day4](#Day4)
 
 ## Day1
 ### Introduction to ASIC deign flow
@@ -165,7 +166,11 @@ how to check placement is correct or not?  - ideal clock network is assumed (clk
 10. new rule added to ppolyres<br>![image](https://github.com/user-attachments/assets/963ff612-8f9e-42db-92c5-e62ec0b85cd1)
 11. rerun case with new tech file, DRC voilated for poly and ppolyres distance<br>![image](https://github.com/user-attachments/assets/344c3b04-b16a-48fc-848f-cd176ad639ce)
 
-
+## Day4
+### Generating LEF file from mag file
+Why LEF file needs to be dumped? why can't directly use layout file or gds file of cell?
+While doing placement of cell, information required for the cells are - bbox, pg pins/signal pins geoms. Details at transistor level - poly layer, diffusion layer, transistor loction is not needed. 
+A LEF file is created for std cell containg all basic geom info of cell that is requied during placement of cell in PnR tool.
 
 
 
