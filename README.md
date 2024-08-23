@@ -92,8 +92,10 @@ how to check placement is correct or not?  - ideal clock network is assumed (clk
    3.2 VTC of cmos inverter (VTC on left, derivative of plot on right)<br>![image](https://github.com/user-attachments/assets/ca8bad83-1d9c-4b41-ad8e-c1dd972af552)
    3.3 spice deck for dynamic analysis<br>![image](https://github.com/user-attachments/assets/15cbb6c3-93ec-448a-852d-c9a31d295d4f)
    3.4 transient output voltage waveform<br>![image](https://github.com/user-attachments/assets/90bfd97a-b6e3-4d27-9556-d3ef6b7a5d03)
-
-   3.5 static summary:<br>
+   3.6 output files dumped after running spice files<br>![image](https://github.com/user-attachments/assets/7086b28f-3f7d-4552-95bb-fe742ea1298f)
+   3.7 script to get static characteristics of cmos inverter from output files<br>![image](https://github.com/user-attachments/assets/12115580-719b-4ae1-beb7-bcdd68f10bcc)
+   3.8 script to get dynamic characteristics of cmos inverter from output files<br>![image](https://github.com/user-attachments/assets/5e3ae4b7-97f8-4296-94b5-0dbe7f5521dc)
+   3.9 static summary:<br>
 
     |  wp |  vm  | vil  | vih  |     vol     |    voh     |
     |-----|------|------|------|-------------|------------|
@@ -102,7 +104,7 @@ how to check placement is correct or not?  - ideal clock network is assumed (clk
     | 197 | 1.73 | 1.52 | 1.97 | 0.197538491 | 3.02188905 |
     | 277 | 1.8  | 1.62 | 2.06 | 0.171349188 | 3.03557396 |
 
-   3.6 dynamic summary:<br>
+   3.10 dynamic summary:<br>
    Cload = 5fF, input slew = output slew = 400ps<br>
    
     |  wp |       rise_delay       |       rise_slew        |       fall_delay      |       fall_slew        |
@@ -111,6 +113,12 @@ how to check placement is correct or not?  - ideal clock network is assumed (clk
     | 117 | 7.899999999999983e-11  | 4.400000000000026e-11  | 7.300000000000006e-11 | 4.7000000000000355e-11 |
     | 197 | 5.300000000000013e-11  | 3.699999999999977e-11  | 8.299999999999982e-11 | 4.400000000000026e-11  |
     | 277 | 3.8000000000000076e-11 | 3.3000000000000196e-11 | 9.099999999999979e-11 | 4.300000000000078e-11  |
+
+   3.11 observation
+   - noise margin improves with increasing strength of nmos/pmos
+   - Vm of inverter shift toward high voltage on increasing strangh of pmos inverter, same goes for VIL, VIH
+   - on increasing driving strangth of pmos on inverter, rise delay and slew decreases -> pmos charges cload -> expected result; fall slew decreases but fall delay increases -> why? while fall output event, current goes through nmos. with increase in pmos strength - short circuit current from pmos increases while fall transition, resulting in more time to discharge cload through nmos.
+   
 
 
 
