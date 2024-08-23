@@ -121,9 +121,15 @@ how to check placement is correct or not?  - ideal clock network is assumed (clk
 
 #### DRC checks
 1. Important links:
-- MAagic DRC doc: http://opencircuitdesign.com/magic/
-- skywater DRC doc: https://skywater-pdk.readthedocs.io/en/main/
-- DRC rules: http://opencircuitdesign.com/magic/techref/maint2.html#drc
+    - MAagic DRC doc: http://opencircuitdesign.com/magic/
+    - skywater DRC doc: https://skywater-pdk.readthedocs.io/en/main/
+    - DRC rules: http://opencircuitdesign.com/magic/techref/maint2.html#drc
+2. download and untar drc test examples<br>![image](https://github.com/user-attachments/assets/95433225-8963-4d8c-a892-c90aae96ab33)
+3. load one of example mag file (met1.mag file)<br>![image](https://github.com/user-attachments/assets/4fb56394-4cc2-4cd7-942c-0e8d7203ef91)
+4. loading techfile and checking drc on example<br>![image](https://github.com/user-attachments/assets/59c9e3cf-fd2e-4f73-bad8-bb64f153ae8c)
+
+
+
 
 
 
