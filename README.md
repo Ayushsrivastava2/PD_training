@@ -3,7 +3,11 @@ Physical design training from VLSI System Design
 ## Table of content
 - [Day1](#Day1)
     - [Asic design flow](#Introduction-to-ASIC-deign-flow)
+    - [Synthesis of picv32a design](#Synthesis-of-picv32a-design)
 - [Day2](#Day2)
+    - [Floorplanning, powerplanning and placement theory](#Floorplanning,-powerplanning-and-placement-theory)
+    - [Running floorplan on picv32a](#Running-floorplan-on-picv32a)
+    - [Running placement on picv32a](#Running-placement-on-picv32a)
 - [Day3](#Day3)
 
 ## Day1
@@ -17,7 +21,7 @@ ASIC design flow
 6. Signoff<br>physical verification - DRC,LVS. timing verification - STA, CDC. fault check - DFT.
 
 
-### Lab
+### Synthesis of picv32a design
 Using picrv32a design for synthesis
 
 Task: To find FF ratio in design-> FF ratio: 1613/14876=0.1084  (10.8%)
@@ -32,7 +36,7 @@ Task: To find FF ratio in design-> FF ratio: 1613/14876=0.1084  (10.8%)
 5. synthesis report<br>![image](https://github.com/user-attachments/assets/560886c5-0b92-469c-800e-516a98c0a34e)
 
 ## Day2
-### Theory
+### Floorplanning, powerplanning and placement theory
 FloorPlanning<br>
 Area estimation of die = sum of instances size in gate netlist / core area utilization<br>
 core area utilization ideally should be around 50-60% to give extra space for buffers and other instances that will get added downstream.<br>
@@ -49,7 +53,7 @@ detailed placement - placement with no overlaps of instances. all instances in c
 placeing buffers in placement: estimate cap between instnces based on distance. place buffer in path of instance with long distance. <br>
 how to check placement is correct or not?  - ideal clock network is assumed (clk skew = 0), setup check is done on placed instances.<br>
 
-### Lab
+### Running floorplan on picv32a
 1. checking variables for floorplanning in openlane in README.md in configurations
 2. from 3 files variables given to floorplanning in openlane - configuration/config.tcl, design/picrv32a/config.tcl, design/picrv32a/sky130A*.tcl (pdk tcl)<br>priority order: pdk tcl > design/picrv32a/config.tcl > configuration/config.tcl
 3. running floorplan (command used: run_floorplan)<br>![image](https://github.com/user-attachments/assets/cd425872-9388-401f-ba80-f5ce678f931a)
@@ -69,8 +73,10 @@ how to check placement is correct or not?  - ideal clock network is assumed (clk
    2.1 second set of variables<br>![image](https://github.com/user-attachments/assets/5c1e9719-8816-4759-bba2-ebcd968bfaa8)
    2.2 new floorplan:<br>![image](https://github.com/user-attachments/assets/0acda414-eee3-43bd-8d4f-75e36aba59ed)
 9. All instnces are places at left bottom corner<br>![image](https://github.com/user-attachments/assets/18fc82d6-580e-4c8d-8c1b-0b6563c8344f)
-10. Design after placement<br>![image](https://github.com/user-attachments/assets/c94f091d-6cb3-40e2-a921-35ee62ff70a2)
-11. Checking instance<br>![image](https://github.com/user-attachments/assets/53a5ea39-ca8f-42ab-9916-6ce686ff6469)
+
+### Running placement on picv32a
+1. Design after placement<br>![image](https://github.com/user-attachments/assets/c94f091d-6cb3-40e2-a921-35ee62ff70a2)
+1. Checking instance<br>![image](https://github.com/user-attachments/assets/53a5ea39-ca8f-42ab-9916-6ce686ff6469)
 
 ## Day3
 ### Theory
