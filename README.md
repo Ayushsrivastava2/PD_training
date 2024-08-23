@@ -118,7 +118,12 @@ how to check placement is correct or not?  - ideal clock network is assumed (clk
    - noise margin improves with increasing strength of nmos/pmos
    - Vm of inverter shift toward high voltage on increasing strangh of pmos inverter, same goes for VIL, VIH
    - on increasing driving strangth of pmos on inverter, rise delay and slew decreases -> pmos charges cload -> expected result; fall slew decreases but fall delay increases -> why? on increasing wp of pmos, cpa of pos also increased, now nmos have to dischareg more cap -> resulting in more delay
-   
+
+#### DRC checks
+1. Important links:
+- MAagic DRC doc: http://opencircuitdesign.com/magic/
+- skywater DRC doc: https://skywater-pdk.readthedocs.io/en/main/
+- DRC rules: http://opencircuitdesign.com/magic/techref/maint2.html#drc
 
 
 
