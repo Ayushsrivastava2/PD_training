@@ -18,7 +18,11 @@ Physical design training from VLSI System Design
     - [Generating LEF file from mag file](#Generating-LEF-file-from-mag-file)
     - [Adding custom inv to picv32a](#Adding-custom-inv-to-picv32a)
     - [STA theory](#STA-theory)
-        - [setup and hold time of FF]
+        - [setup and hold time of FF](#setup-and-hold-time-of-FF)
+        - [prelayout analysis](#prelayout-analysis)
+        - [Clock tree synthesis](#Clock-tree-synthesis)
+        - [Crosstalk and clcok net shielding](#Crosstalk-and-clcok-net-shielding)
+        - [timing analysis with real clock](#timing-analysis-with-real-clock)
     - [Pre-layout timing analysis on picv32a]
     - [CTS on picv32a]
     - [Post-layout timing analysis on picv32a]
