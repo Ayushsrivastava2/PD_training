@@ -241,6 +241,23 @@ A LEF file is created for std cell containg all basic geom info of cell that is 
 1. setup analysis using real clock network<br>![image](https://github.com/user-attachments/assets/57d176bd-1a9c-4454-bc7b-e6ac698d24a3)
 2. hold analysis using real clock network<br>![image](https://github.com/user-attachments/assets/3d8ec996-bd18-4e65-b496-2a89db7e5ac8)
 
+### Pre-layout timing analysis on picorv32a
+1. technical keywords used in openlane:
+    - tns: total negative slack
+    - wns: worst negative slack
+2. fixing slack at synthesis stage
+    1. initial slack values after synthesis<br>![image](https://github.com/user-attachments/assets/1f36fa3a-f2ab-4dc8-9500-1d5dd7413aee)
+    2. initial chip area<br>![image](https://github.com/user-attachments/assets/68311e72-3215-4336-87e8-514f97efa2f4)
+    3. synthesis stratergy for abc tool in yosys<br>![image](https://github.com/user-attachments/assets/26b47790-b794-4a1e-9329-f9bee5ee5604)
+    4. changing settings for better slack values<br>![image](https://github.com/user-attachments/assets/72226461-0748-40e8-a35b-25e1655b1262)
+    5. improved verilog after synthesis with settings<br>![image](https://github.com/user-attachments/assets/9ccf8fc3-e5ae-4041-95cd-fd83c558de3f)
+    6. netlist comparison<br>
+    
+3. running floorplan and placement with modified netlist<br>
+
+
+
+
 
 
 
