@@ -259,8 +259,14 @@ A LEF file is created for std cell containg all basic geom info of cell that is 
     |        tns        |   -711.59   |    0.0     |
     |        wns        |    -23.89   |    0.0     |
     8. tns, wns of netlist improved at cost of chip area
-    
-3. running floorplan and placement with modified netlist<br>
+
+3. since there in no macros in design, running subcommands of run_floorplan instead of `run_floorplan`
+    - `init_floorplan`
+    - `place_io`
+    - `global_placement`
+    - `tab_decap_or`
+4. running placement and view design in magic<br>![image](https://github.com/user-attachments/assets/731710be-6227-4f13-bb08-4c103ca38726)
+
 
 
 
