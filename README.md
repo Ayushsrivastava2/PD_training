@@ -17,7 +17,8 @@ Physical design training from VLSI System Design
 - [Day4](#Day4)
     - [Generating LEF file from mag file](#Generating-LEF-file-from-mag-file)
     - [Adding custom inv to picv32a](#Adding-custom-inv-to-picv32a)
-    - [STA theory]
+    - [STA theory](#STA-theory)
+        - [setup and hold time of FF]
     - [Pre-layout timing analysis on picv32a]
     - [CTS on picv32a]
     - [Post-layout timing analysis on picv32a]
@@ -209,6 +210,39 @@ A LEF file is created for std cell containg all basic geom info of cell that is 
    <br>synthesis done - 1554 instances of sky130_myinv used
 7. running floorplan and placement to see sky130_myinv in design<br>![image](https://github.com/user-attachments/assets/a648c138-dcdf-4953-ab3e-b9bb0919c4e2)
    <br>command to run floorplan: `run_floorplan`, command to run placement: `run_placemnt`
+
+### STA theory
+1. Delay table in lib file -> cell delay model -> depends on input slew and output load cap<br>![image](https://github.com/user-attachments/assets/54943c7c-c6de-484b-b78c-ba58b2d726ee)
+#### setup and hold time of FF
+1. setup time and of FF<br>![image](https://github.com/user-attachments/assets/51c45e68-ac23-4ad1-a950-29ced396bb4a)
+2. hold time of FF<br>![image](https://github.com/user-attachments/assets/0c5f8c42-ba86-4398-94e7-e9a7bd8bb3c2)
+#### prelayout analysis
+1. pre-layout analysis: CTS is not done-> no clock network -> no clock skew. Ideal clock tree is assumed with clock skew = 0, and setup analysis is done on placed instnaces.
+2. why not done hold analysis at this stage also?<br>
++ve clock skew relax setup slack -> worst setup slack will come with ideal clock. If setup voilations are fixed in this stage, no or very less setup voilations will be seen after CTS.<br>
+0/-ve clock skew relax hold slack -> ideal clock network is ideal condition for hold check. checks should be done on worst condition.
+3. setup analysis with ideal clock<br>![image](https://github.com/user-attachments/assets/e7867ec3-fa80-4689-a989-efab6fadf61d)
+4. clock jitter<br>![image](https://github.com/user-attachments/assets/bb95b50d-7ad7-4a66-aa93-1dd7b365d531)
+#### Clock tree synthesis
+1. bad clock routing -> different clock delay time for FFs<br>![image](https://github.com/user-attachments/assets/a847caa1-00ad-43dd-bc29-e1e1d4320d28)
+2. clock tree routing using H-tree algo<br>![image](https://github.com/user-attachments/assets/001b8f23-09fc-47ae-bf37-f0514b7ce51e)
+3. adding clock buffer to fix high slew of clock signal at FF<br>
+![image](https://github.com/user-attachments/assets/b7de9dc3-4ffb-481e-9659-9338f88623b6)<br>
+![image](https://github.com/user-attachments/assets/1dae89ed-77d1-4f24-912d-973fe9e45f11)
+#### Crosstalk and clcok net shielding
+1. glitch<br>![image](https://github.com/user-attachments/assets/6ffa60a3-db5b-4ef2-9348-0f82731635ef)
+2. additional delay due to crosstalk<br>![image](https://github.com/user-attachments/assets/8f8ffee6-db26-401d-ac94-3813a8138277)
+3. clock net shielding<br>![image](https://github.com/user-attachments/assets/11697b37-f66d-486e-bee9-97c8f86e640b)
+#### timing analysis with real clock
+1. setup analysis using real clock network<br>![image](https://github.com/user-attachments/assets/57d176bd-1a9c-4454-bc7b-e6ac698d24a3)
+2. hold analysis using real clock network<br>![image](https://github.com/user-attachments/assets/3d8ec996-bd18-4e65-b496-2a89db7e5ac8)
+
+
+
+
+
+
+
 
 
 
