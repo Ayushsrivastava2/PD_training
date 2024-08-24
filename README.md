@@ -3,11 +3,11 @@ Physical design training from VLSI System Design
 ## Table of content
 - [Day1](#Day1)
     - [Asic design flow](#Introduction-to-ASIC-deign-flow)
-    - [Synthesis of picv32a design](#Synthesis-of-picv32a-design)
+    - [Synthesis of picorv32a design](#Synthesis-of-picv32a-design)
 - [Day2](#Day2)
     - [Floorplanning, powerplanning and placement theory](#Floorplanning-powerplanning-and-placement-theory)
-    - [Running floorplan on picv32a](#Running-floorplan-on-picv32a)
-    - [Running placement on picv32a](#Running-placement-on-picv32a)
+    - [Running floorplan on picorv32a](#Running-floorplan-on-picv32a)
+    - [Running placement on picorv32a](#Running-placement-on-picv32a)
 - [Day3](#Day3)
     - [CMOS inverter characteristics](#CMOS-inverter-characteristics)
     - [Generating CMOS spice deck](#Generating-CMOS-spice-deck)
@@ -16,16 +16,16 @@ Physical design training from VLSI System Design
     - [DRC checks](#DRC-checks)
 - [Day4](#Day4)
     - [Generating LEF file from mag file](#Generating-LEF-file-from-mag-file)
-    - [Adding custom inv to picv32a](#Adding-custom-inv-to-picv32a)
+    - [Adding custom inv to picorv32a](#Adding-custom-inv-to-picv32a)
     - [STA theory](#STA-theory)
         - [setup and hold time of FF](#setup-and-hold-time-of-FF)
         - [prelayout analysis](#prelayout-analysis)
         - [Clock tree synthesis](#Clock-tree-synthesis)
         - [Crosstalk and clcok net shielding](#Crosstalk-and-clcok-net-shielding)
         - [timing analysis with real clock](#timing-analysis-with-real-clock)
-    - [Pre-layout timing analysis on picv32a]
-    - [CTS on picv32a]
-    - [Post-layout timing analysis on picv32a]
+    - [Pre-layout timing analysis on picorv32a]
+    - [CTS on picorv32a]
+    - [Post-layout timing analysis on picorv32a]
 
 ## Day1
 ### Introduction to ASIC deign flow
