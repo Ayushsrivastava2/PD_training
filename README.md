@@ -251,13 +251,14 @@ A LEF file is created for std cell containg all basic geom info of cell that is 
     3. synthesis stratergy for abc tool in yosys<br>![image](https://github.com/user-attachments/assets/26b47790-b794-4a1e-9329-f9bee5ee5604)
     4. changing settings for better slack values<br>![image](https://github.com/user-attachments/assets/72226461-0748-40e8-a35b-25e1655b1262)
     5. improved verilog after synthesis with settings<br>![image](https://github.com/user-attachments/assets/9ccf8fc3-e5ae-4041-95cd-fd83c558de3f)
-    6. netlist comparison<br>
+    6. netlist comparison
+  
     | netlist parameter |   initial   |   after    |
     |-------------------|-------------|------------|
     |     chip area     | 147712.9184 | 181730.544 |
     |        tns        |   -711.59   |    0.0     |
     |        wns        |    -23.89   |    0.0     |
-    7. tns, wns of netlist improved at cost of chip area
+    8. tns, wns of netlist improved at cost of chip area
     
 3. running floorplan and placement with modified netlist<br>
 
