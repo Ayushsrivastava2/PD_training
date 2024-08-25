@@ -301,9 +301,23 @@ A LEF file is created for std cell containg all basic geom info of cell that is 
 <br>![image](https://github.com/user-attachments/assets/3617e5de-6a3e-4e54-9550-62fbf20b45d6)
 <br>![image](https://github.com/user-attachments/assets/d532881a-e3ed-4296-a0d9-845f07aa7b40)
 4. setting up lib path, verilog path and sdc<br>![image](https://github.com/user-attachments/assets/4779842c-827c-41c4-8272-78a1326781b7)
-5. reporting slack values<br>![image](https://github.com/user-attachments/assets/877f41de-3cb0-44e8-9b62-2f2b2b92c1e9)
-    - post CTS hold slack<br>![image](https://github.com/user-attachments/assets/c0ab2b2a-8c47-404c-95b1-90ea72e8cccc)
-    - post CTS setup slack<br>![image](https://github.com/user-attachments/assets/9ed4dd41-a341-48c0-ae4b-68a150ee055c)
+5. all commands:<br>
+```
+sfdf
+```
+6. reporting slack values<br>![image](https://github.com/user-attachments/assets/877f41de-3cb0-44e8-9b62-2f2b2b92c1e9)
+    - post CTS hold slack<br>![image](https://github.com/user-attachments/assets/c4becf10-3f23-4dcd-9ff6-3ffe2dbd72c2)
+    - post CTS setup slack<br>![image](https://github.com/user-attachments/assets/a0bfe8fd-c83d-4472-ac84-d727a3f617b2)
+    - hold check violated -> pesimmistic for hold check, how to fix? -> decrease clock skew or increase data path delay
+7. impact of high driving clock buffers on post CTS STA
+    1. current clock buffer list and def file<br>![image](https://github.com/user-attachments/assets/fe8c0410-d187-4862-b185-dfcbd1c6ef0f)
+    2. changing current def to post placement def -> need to rerun cts, def needed without CTS
+    3. cts done<br>![image](https://github.com/user-attachments/assets/62292f25-ba0d-4ae1-96ad-7c5f3e3c6439)
+    4. open openroad and dump new db, and report STA check<br>![image](https://github.com/user-attachments/assets/af9c4b3d-bab0-4955-ab8c-c2cceaa5574d)
+
+
+ 
+
 
 
 
