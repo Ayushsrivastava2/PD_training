@@ -184,7 +184,7 @@ While doing placement of cell, information required for the cells are - bbox, pg
 A LEF file is created for std cell containg all basic geom info of cell that is requied during placement of cell in PnR tool.
 
 #### Changing grid size of layout
-1. loading sky130_inv.mag file and check default grid<br>![image](https://github.com/user-attachments/assets/39054ed3-6c6f-437d-b265-56441d2677a8)
+1. loading sky130_inv.mag file and check default grid, command used: `magic -T sky130A.tech sky130A_inv.mag`<br>![image](https://github.com/user-attachments/assets/39054ed3-6c6f-437d-b265-56441d2677a8)
 2. check tract.info for track pitch size and change grid size in magic according to this pitch<br>![image](https://github.com/user-attachments/assets/315f1b29-aed7-4ce1-b3e3-7df12852597d)
 3. what values stored in track.info file? pitch info for each metal layers. Height of standard cells are measured are measured in terms of trach pitch.
 4. layout with new grid<br>![image](https://github.com/user-attachments/assets/e03542d9-9bb2-46a1-b14c-8d5119b55bb5)
