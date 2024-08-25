@@ -277,11 +277,11 @@ A LEF file is created for std cell containg all basic geom info of cell that is 
     5. tns and wns improvements with successive cell upsizing
     
     | current wns | current tns |   from  |    to   |                                      cell upsizing                                      | old path slack |
-|-------------|-------------|---------|---------|-----------------------------------------------------------------------------------------|----------------|
-|   -0.1414   |    -0.49    | _50085_ | _50057_ |                                            NA                                           |       NA       |
-|   -0.1197   |   -0.3209   | _50114_ | _50057_ | replace_cell _33528_ sky130_fd_sc_hd__buf_4;replace_cell _33531_ sky130_fd_sc_hd__buf_4 |      0.05      |
-|   -0.1089   |   -0.2614   | _50087_ | _50057_ |                       replace_cell _36448_ sky130_fd_sc_hd__buf_4                       |      0.01      |
-|   -0.1072   |   -0.2531   | _50116_ | _50057_ |                 report_checks -from _50114_ -to _50057_ -through _36448_                |      0.12      |
+    |-------------|-------------|---------|---------|-----------------------------------------------------------------------------------------|----------------|
+    |   -0.1414   |    -0.49    | _50085_ | _50057_ |                                            NA                                           |       NA       |
+    |   -0.1197   |   -0.3209   | _50114_ | _50057_ | replace_cell _33528_ sky130_fd_sc_hd__buf_4;replace_cell _33531_ sky130_fd_sc_hd__buf_4 |      0.05      |
+    |   -0.1089   |   -0.2614   | _50087_ | _50057_ |                       replace_cell _36448_ sky130_fd_sc_hd__buf_4                       |      0.01      |
+    |   -0.1072   |   -0.2531   | _50116_ | _50057_ |                 report_checks -from _50114_ -to _50057_ -through _36448_                |      0.12      |
 
     6. writing edited netlist to verilog file<br>![image](https://github.com/user-attachments/assets/834566e9-2548-4739-80e4-4f6ead76d917)
 
