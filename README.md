@@ -25,6 +25,7 @@ Physical design training from VLSI System Design
         - [timing analysis with real clock](#timing-analysis-with-real-clock)
     - [Pre-layout timing analysis on picorv32a](#Pre-layout-timing-analysis-on-picorv32a)
     - [CTS on picorv32a](#CTS-on-picorv32a)
+    - [Post CTS STA on picorv32a](#Post-CTS-STA-on-picorv32a)
     - [Post-layout timing analysis on picorv32a]
 
 ## Day1
@@ -284,6 +285,21 @@ A LEF file is created for std cell containg all basic geom info of cell that is 
     |   -0.1072   |   -0.2531   | _50116_ | _50057_ |                 report_checks -from _50114_ -to _50057_ -through _36448_                |      0.12      |
 
     6. writing edited netlist to verilog file<br>![image](https://github.com/user-attachments/assets/834566e9-2548-4739-80e4-4f6ead76d917)
+
+### CTS on picorv32a
+1. tool parameters for running CTS<br>![image](https://github.com/user-attachments/assets/52c6dd98-61c8-4685-81c9-b374f62f8d71)
+2. running cts, command: `run_cts`<br>![image](https://github.com/user-attachments/assets/212313b7-a76b-4615-8b70-fd79ca3ed5d0)
+3. CTS done on picorv32a<br>![image](https://github.com/user-attachments/assets/6898f23c-6a1a-4956-92a9-b41fe708b0a6)
+4. new verilog with clock buffers inserted, and new def file<br>![image](https://github.com/user-attachments/assets/79a10a7a-cf91-4652-ad5a-70b86fbe43f0)
+5. checking mat transition and max cap of clock root buffer<br>![image](https://github.com/user-attachments/assets/7d842fd2-4ad7-4090-9378-282d82942359)
+6. pre routing, max cap load from lib is used for clock buffers and max transition time is 10% of clock period<br>![image](https://github.com/user-attachments/assets/ef905a28-882e-41c1-a7af-d215d83c0597)
+
+### Post CTS STA on picorv32a
+1. 
+
+
+
+
 
 
 
