@@ -26,7 +26,8 @@ Physical design training from VLSI System Design
     - [Pre-layout timing analysis on picorv32a](#Pre-layout-timing-analysis-on-picorv32a)
     - [CTS on picorv32a](#CTS-on-picorv32a)
     - [Post CTS STA on picorv32a](#Post-CTS-STA-on-picorv32a)
-    - [Post-layout timing analysis on picorv32a]
+    - [Impact of improved clock tree on post CTS STA](#Impact-of-improved-clock-tree-on-post-CTS-STA)
+ - [Day5](#Day5)
 
 ## Day1
 ### Introduction to ASIC deign flow
@@ -316,11 +317,22 @@ set_propagated_clock [all_clocks]
     - post CTS hold slack<br>![image](https://github.com/user-attachments/assets/c4becf10-3f23-4dcd-9ff6-3ffe2dbd72c2)
     - post CTS setup slack<br>![image](https://github.com/user-attachments/assets/a0bfe8fd-c83d-4472-ac84-d727a3f617b2)
     - hold check violated -> pesimmistic for hold check, how to fix? -> decrease clock skew or increase data path delay
-7. impact of high driving clock buffers on post CTS STA
-    1. current clock buffer list and def file<br>![image](https://github.com/user-attachments/assets/fe8c0410-d187-4862-b185-dfcbd1c6ef0f)
-    2. changing current def to post placement def -> need to rerun cts, def needed without CTS
-    3. cts done<br>![image](https://github.com/user-attachments/assets/62292f25-ba0d-4ae1-96ad-7c5f3e3c6439)
-    4. open openroad and dump new db, and report STA check<br>![image](https://github.com/user-attachments/assets/af9c4b3d-bab0-4955-ab8c-c2cceaa5574d)
+
+### Impact of improved clock tree on post CTS STA
+1. current clock buffer list and def file<br>![image](https://github.com/user-attachments/assets/fe8c0410-d187-4862-b185-dfcbd1c6ef0f)
+2. changing current def to post placement def -> need to rerun cts, def needed without CTS
+3. cts done<br>![image](https://github.com/user-attachments/assets/62292f25-ba0d-4ae1-96ad-7c5f3e3c6439)
+4. open openroad and dump new db, and report STA check<br>![image](https://github.com/user-attachments/assets/af9c4b3d-bab0-4955-ab8c-c2cceaa5574d)
+5. slack values with improved CTS
+   - hold check<br>![image](https://github.com/user-attachments/assets/2a1b1b16-3191-4a8c-afc1-a43abd11aa75)
+   - setup check<br>![image](https://github.com/user-attachments/assets/daa06f68-9cff-4111-b5da-07ac0c291783)
+   - hold check met after replacing 1x clock buffers with 2x,4x and 8x clock buffers - clock skew decrease which relax hold violations
+
+## Day5
+
+
+       
+
 
 
  
