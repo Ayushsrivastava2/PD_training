@@ -274,7 +274,7 @@ A LEF file is created for std cell containg all basic geom info of cell that is 
 <br>![image](https://github.com/user-attachments/assets/e58ac6b5-fc1c-4cd9-bacf-735be9d9929e)
     3. slack on old path<br>![image](https://github.com/user-attachments/assets/cb2bdd4c-0716-4330-9007-c16dc7689cac)
     4. current wns (new path)<br>![image](https://github.com/user-attachments/assets/5a5cbb00-06cc-4cb7-8694-f88e319dc0e6)
-    5. tns and wns improvements with successive cell upsizing<br>
+    5. tns and wns improvements with successive cell upsizing
     
     | current wns | current tns |   from  |    to   |                                      cell upsizing                                      | old path slack |
 |-------------|-------------|---------|---------|-----------------------------------------------------------------------------------------|----------------|
@@ -283,7 +283,8 @@ A LEF file is created for std cell containg all basic geom info of cell that is 
 |   -0.1089   |   -0.2614   | _50087_ | _50057_ |                       replace_cell _36448_ sky130_fd_sc_hd__buf_4                       |      0.01      |
 |   -0.1072   |   -0.2531   | _50116_ | _50057_ |                 report_checks -from _50114_ -to _50057_ -through _36448_                |      0.12      |
 
-    6. 
+    6. writing edited netlist to verilog file<br>![image](https://github.com/user-attachments/assets/834566e9-2548-4739-80e4-4f6ead76d917)
+
 
 
 
