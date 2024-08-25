@@ -246,7 +246,7 @@ A LEF file is created for std cell containg all basic geom info of cell that is 
 1. technical keywords used in openlane:
     - tns: total negative slack
     - wns: worst negative slack
-2. fixing slack at synthesis stage
+2. Post synthesis STA check
     1. initial slack values after synthesis<br>![image](https://github.com/user-attachments/assets/1f36fa3a-f2ab-4dc8-9500-1d5dd7413aee)
     2. initial chip area<br>![image](https://github.com/user-attachments/assets/68311e72-3215-4336-87e8-514f97efa2f4)
     3. synthesis stratergy for abc tool in yosys<br>![image](https://github.com/user-attachments/assets/26b47790-b794-4a1e-9329-f9bee5ee5604)
@@ -267,7 +267,7 @@ A LEF file is created for std cell containg all basic geom info of cell that is 
     - `global_placement`
     - `tab_decap_or`
 4. running placement and view design in magic<br>![image](https://github.com/user-attachments/assets/731710be-6227-4f13-bb08-4c103ca38726)
-5. fixing -ve slack of synthesized verilog with cell sizing
+5. Post synthesis STA check -> improving negative slack with cell upsizing
     1. prepare pre_sta.conf file, with clock period as 12 -> wns > 0; changed clock period to 4 to get -ve slack, run sta using command: `sta pre_sta.conf`
        <br>![image](https://github.com/user-attachments/assets/a55ef448-b8cb-4ab7-8752-6770d199a794)
        <br>no hold violation<br>![image](https://github.com/user-attachments/assets/8223432f-42db-4276-b3d8-19485ebcce72)
@@ -295,7 +295,23 @@ A LEF file is created for std cell containg all basic geom info of cell that is 
 6. pre routing, max cap load from lib is used for clock buffers and max transition time is 10% of clock period<br>![image](https://github.com/user-attachments/assets/ef905a28-882e-41c1-a7af-d215d83c0597)
 
 ### Post CTS STA on picorv32a
-1. 
+1. post cts sta analysis using openroad, launching openroad using command `openroad`<br>![image](https://github.com/user-attachments/assets/0d24f937-5926-4497-8026-a62c6e0825ce)
+2. read lef file using command `read_lef <lef file path>`, read def file using command `read_def <def file path`<br>![image](https://github.com/user-attachments/assets/272fb60e-cb53-46f3-b871-6193b3bf6766)
+3. write sta db ussing command `write_db <db name>`
+<br>![image](https://github.com/user-attachments/assets/3617e5de-6a3e-4e54-9550-62fbf20b45d6)
+<br>![image](https://github.com/user-attachments/assets/d532881a-e3ed-4296-a0d9-845f07aa7b40)
+4. setting up lib path, verilog path and sdc<br>![image](https://github.com/user-attachments/assets/4779842c-827c-41c4-8272-78a1326781b7)
+5. reporting slack values<br>![image](https://github.com/user-attachments/assets/877f41de-3cb0-44e8-9b62-2f2b2b92c1e9)
+    - post CTS hold slack<br>![image](https://github.com/user-attachments/assets/c0ab2b2a-8c47-404c-95b1-90ea72e8cccc)
+    - post CTS setup slack<br>![image](https://github.com/user-attachments/assets/9ed4dd41-a341-48c0-ae4b-68a150ee055c)
+
+
+
+
+
+
+
+
 
 
 
