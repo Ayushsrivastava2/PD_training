@@ -266,6 +266,18 @@ A LEF file is created for std cell containg all basic geom info of cell that is 
     - `global_placement`
     - `tab_decap_or`
 4. running placement and view design in magic<br>![image](https://github.com/user-attachments/assets/731710be-6227-4f13-bb08-4c103ca38726)
+5. fixing -ve slack of synthesized verilog with cell sizing
+    1. prepare pre_sta.conf file, with clock period as 12 -> wns > 0; changed clock period to 4 to get -ve slack, run sta using command: `sta pre_sta.conf`
+       <br>![image](https://github.com/user-attachments/assets/a55ef448-b8cb-4ab7-8752-6770d199a794)
+       <br>no hold violation<br>![image](https://github.com/user-attachments/assets/8223432f-42db-4276-b3d8-19485ebcce72)
+    2. chaning cell size of buffer in worst slack path<br>![image](https://github.com/user-attachments/assets/eb73d5b3-ba8c-48d2-8c43-12419c3ed614)
+<br>![image](https://github.com/user-attachments/assets/e58ac6b5-fc1c-4cd9-bacf-735be9d9929e)
+    3. slack on old path<br>![image](https://github.com/user-attachments/assets/cb2bdd4c-0716-4330-9007-c16dc7689cac)
+    4. current wns (new path)<br>![image](https://github.com/user-attachments/assets/5a5cbb00-06cc-4cb7-8694-f88e319dc0e6)
+
+
+
+
 
 
 
