@@ -303,7 +303,14 @@ A LEF file is created for std cell containg all basic geom info of cell that is 
 4. setting up lib path, verilog path and sdc<br>![image](https://github.com/user-attachments/assets/4779842c-827c-41c4-8272-78a1326781b7)
 5. all commands:<br>
 ```
-sfdf
+read_lef designs/picorv32a/runs/25-08_09-10/tmp/merged.lef
+read_def designs/picorv32a/runs/25-08_09-10/results/cts/picorv32a.cts.def
+write_db pico_cts1.db
+read_db pico_cts1.db
+read_verilog designs/picorv32a/runs/25-08_09-10/results/synthesis/picorv32a.synthesis_cts.v
+read_liberty $::env(LIB_SYNTH_COMPLETE)
+read_sdc my_base.sdc
+set_propagated_clock [all_clocks]
 ```
 6. reporting slack values<br>![image](https://github.com/user-attachments/assets/877f41de-3cb0-44e8-9b62-2f2b2b92c1e9)
     - post CTS hold slack<br>![image](https://github.com/user-attachments/assets/c4becf10-3f23-4dcd-9ff6-3ffe2dbd72c2)
