@@ -28,6 +28,14 @@ Physical design training from VLSI System Design
     - [Post CTS STA on picorv32a](#Post-CTS-STA-on-picorv32a)
     - [Impact of improved clock tree on post CTS STA](#Impact-of-improved-clock-tree-on-post-CTS-STA)
  - [Day5](#Day5)
+    - [PDN generation and routing theory](#PDN-generation-and-routing-theory)
+        - [PDN structure](#PND-structure)
+        - [Maze routing - Lee's algorithm](#Maze-routing---Lee's-algorithm)
+        - [DRC clean routing](#DRC-clean-routing)
+        - [Parasitic Extraction](#Parasitic-Extraction)
+        - [TritonRoute](#TritonRoute)
+    - [PDN generation on picorv32a]
+    - [Routing on picorv32a]
 
 ## Day1
 ### Introduction to ASIC deign flow
@@ -329,61 +337,28 @@ set_propagated_clock [all_clocks]
    - hold check met after replacing 1x clock buffers with 2x,4x and 8x clock buffers - clock skew decrease which relax hold violations
 
 ## Day5
+### PDN generation and routing theory
+#### PDN structure
+1. PND structure<br>![image](https://github.com/user-attachments/assets/7b3bdc04-fca5-4642-9a15-e69817161f1b)
+
+#### Maze routing - Lee's algorithm
+1. Routing algorithm -> connect 2 points in design in best possible way with less bends<br>![image](https://github.com/user-attachments/assets/acea8e69-ee1c-4ce0-a4ae-b688d3298620)
+2. routing grid<br>![image](https://github.com/user-attachments/assets/55223a86-6203-4321-bd7d-4b88abe7e6f8)
+3. Maze routing -> time taking procss -> creating routing grid and propagating weights from start point to end point
+
+#### DRC clean routing
+1. wire width<br>![image](https://github.com/user-attachments/assets/30cb44dd-a565-4fac-a972-6ec0e11eb411)
+2. wire pitch<br>![image](https://github.com/user-attachments/assets/82242b07-9824-4806-a3f3-b26f48620627)
+3. wire spacing<br>![image](https://github.com/user-attachments/assets/0d96b473-7594-4136-a69b-d03834b0ab90)
+4. signal short<br>![image](https://github.com/user-attachments/assets/48d6d40d-fdb2-4917-b2a1-dae340821c3b)
+5. via width<br>![image](https://github.com/user-attachments/assets/0abb0891-8d9a-4381-8b38-3d1944aac5ad)
+6. via spacing<br>![image](https://github.com/user-attachments/assets/baf6c78d-b780-4838-b7aa-3f71d56df96e)
+
+#### Parasitic Extraction
+1. parasitic extraction after routing stage<br>![image](https://github.com/user-attachments/assets/5bf8b308-9edf-420a-88cb-fc3bedc2f838)
+
+#### TritonRoute
+
 
 
        
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
