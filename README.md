@@ -372,8 +372,6 @@ set_propagated_clock [all_clocks]
 
 ![image](https://github.com/user-attachments/assets/e4f8d201-dbbe-4964-9422-225246c80d10)
 
-![image](https://github.com/user-attachments/assets/e22761f3-affc-4c59-a74b-1ea68dbd3029)
-
 ![image](https://github.com/user-attachments/assets/6b1f1ffb-828b-4a9a-a6dc-5d1f6587e457)
 
 
