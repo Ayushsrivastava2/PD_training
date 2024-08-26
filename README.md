@@ -360,5 +360,18 @@ set_propagated_clock [all_clocks]
 #### TritonRoute
 
 
+### PDN generation on picorv32a
+1. generating pnd on picorv32a, command: `gen_pdn`<br>![image](https://github.com/user-attachments/assets/15c06958-df4e-44b6-9717-8eec8e9e5aab)
+2. pdn gen done, grid structure<br>![image](https://github.com/user-attachments/assets/307aabb7-c47d-4860-98af-613335dc9a45)
+3. new def file<br>![image](https://github.com/user-attachments/assets/df79569a-d79a-4839-ba31-6772f363b7ac)
+4. viewing pdn def using magic<br>![image](https://github.com/user-attachments/assets/c02860b7-ccdf-4a1e-89d2-9d44188cd4c0)
+
+### Routing on picorv32a
+1. controls for routing<br>![image](https://github.com/user-attachments/assets/18ffab2e-7b07-4055-b83a-3a18e68e82c4)
+2. running routing, command: `run_routing`<br>![image](https://github.com/user-attachments/assets/77151bd4-34fa-46ec-9a77-8c304d1e7742)
+
+
+
+
 
        
