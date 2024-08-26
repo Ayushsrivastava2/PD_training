@@ -34,8 +34,8 @@ Physical design training from VLSI System Design
         - [DRC clean routing](#DRC-clean-routing)
         - [Parasitic Extraction](#Parasitic-Extraction)
         - [TritonRoute](#TritonRoute)
-    - [PDN generation on picorv32a]
-    - [Routing on picorv32a]
+    - [PDN generation on picorv32a](#PDN-generation-on-picorv32a)
+    - [Routing on picorv32a](#Routing-on-picorv32a)
 
 ## Day1
 ### Introduction to ASIC deign flow
