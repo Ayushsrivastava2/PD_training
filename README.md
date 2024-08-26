@@ -358,6 +358,23 @@ set_propagated_clock [all_clocks]
 1. parasitic extraction after routing stage<br>![image](https://github.com/user-attachments/assets/5bf8b308-9edf-420a-88cb-fc3bedc2f838)
 
 #### TritonRoute
+![image](https://github.com/user-attachments/assets/1addc337-2f4e-459e-896d-ea9639acb342)
+
+![image](https://github.com/user-attachments/assets/0e742d43-b009-46a0-8999-a173528587fc)
+
+![image](https://github.com/user-attachments/assets/33e74a39-3ed4-4e6e-a58f-cee2e1a2eb64)
+
+![image](https://github.com/user-attachments/assets/4c1090ae-6a60-459d-bebf-38c1adba10cc)
+
+![image](https://github.com/user-attachments/assets/3fa1aa63-fc12-443f-a7db-33d12b1c8697)
+
+![image](https://github.com/user-attachments/assets/c74997fe-9f86-4275-a9cf-db98725b1aca)
+
+![image](https://github.com/user-attachments/assets/e4f8d201-dbbe-4964-9422-225246c80d10)
+
+![image](https://github.com/user-attachments/assets/e22761f3-affc-4c59-a74b-1ea68dbd3029)
+
+![image](https://github.com/user-attachments/assets/6b1f1ffb-828b-4a9a-a6dc-5d1f6587e457)
 
 
 ### PDN generation on picorv32a
@@ -369,6 +386,22 @@ set_propagated_clock [all_clocks]
 ### Routing on picorv32a
 1. controls for routing<br>![image](https://github.com/user-attachments/assets/18ffab2e-7b07-4055-b83a-3a18e68e82c4)
 2. running routing, command: `run_routing`<br>![image](https://github.com/user-attachments/assets/77151bd4-34fa-46ec-9a77-8c304d1e7742)
+3. routing done<br>![image](https://github.com/user-attachments/assets/eb3e8c9f-6d82-4517-96f4-6021e538bb04)
+4. number of violations reduced to 0 after 57th iteration<br>![image](https://github.com/user-attachments/assets/52b4d693-8dfc-4dd9-8752-dc219b1adc0d)
+5. new def file and spef file<br>![image](https://github.com/user-attachments/assets/cd434004-59f5-4aed-bde9-82297dabdeb2)
+6. picorv32a layout post routing<br>![image](https://github.com/user-attachments/assets/1952bb2b-f743-4e3b-988d-6dff282350fc)
+<br>signal routes<br>![image](https://github.com/user-attachments/assets/d370429b-f8ae-42b8-af6e-cbc68503adad)
+<br>filler cells added and routing to pads done<br>![image](https://github.com/user-attachments/assets/33dec56f-d646-4824-a69a-cc4ab4c73e4c)
+7. speff file<br>![image](https://github.com/user-attachments/assets/eb992538-8bc0-468c-9779-b6469ead1deb)
+8. checking instance connection on spef file<br>![image](https://github.com/user-attachments/assets/438f1cd3-98dc-4ebc-b781-920668eb4d53)
+
+
+
+
+
+
+
+
 
 
 
