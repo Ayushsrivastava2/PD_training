@@ -29,7 +29,7 @@ Physical design training from VLSI System Design
     - [Impact of improved clock tree on post CTS STA](#Impact-of-improved-clock-tree-on-post-CTS-STA)
  - [Day5](#Day5)
     - [PDN generation and routing theory](#PDN-generation-and-routing-theory)
-        - [PDN structure](#PND-structure)
+        - [PDN structure](#PDN-structure)
         - [Maze routing - Lee's algorithm](#Maze-routing---Lee's-algorithm)
         - [DRC clean routing](#DRC-clean-routing)
         - [Parasitic Extraction](#Parasitic-Extraction)
