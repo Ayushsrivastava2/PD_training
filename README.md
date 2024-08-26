@@ -30,7 +30,7 @@ Physical design training from VLSI System Design
  - [Day5](#Day5)
     - [PDN generation and routing theory](#PDN-generation-and-routing-theory)
         - [PDN structure](#PDN-structure)
-        - [Maze routing - Lee's algorithm](#Maze-routing---Lee's-algorithm)
+        - [Maze routing - Lee's algorithm](#Maze-routing)
         - [DRC clean routing](#DRC-clean-routing)
         - [Parasitic Extraction](#Parasitic-Extraction)
         - [TritonRoute](#TritonRoute)
@@ -341,7 +341,7 @@ set_propagated_clock [all_clocks]
 #### PDN structure
 1. PND structure<br>![image](https://github.com/user-attachments/assets/7b3bdc04-fca5-4642-9a15-e69817161f1b)
 
-#### Maze routing - Lee's algorithm
+#### Maze routing
 1. Routing algorithm -> connect 2 points in design in best possible way with less bends<br>![image](https://github.com/user-attachments/assets/acea8e69-ee1c-4ce0-a4ae-b688d3298620)
 2. routing grid<br>![image](https://github.com/user-attachments/assets/55223a86-6203-4321-bd7d-4b88abe7e6f8)
 3. Maze routing -> time taking procss -> creating routing grid and propagating weights from start point to end point
